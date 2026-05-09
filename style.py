@@ -65,3 +65,18 @@ def apply_style(fig, title, xlabel, ylabel):
         )
     )
     return fig
+def get_text_color(hex_color):
+
+    r, g, b = mcolors.to_rgb(hex_color)
+
+    brightness = (
+        0.299 * r +
+        0.587 * g +
+        0.114 * b
+    )
+
+    return (
+        "#c71585"
+        if brightness > 0.6
+        else "#fffaf0"
+    )
