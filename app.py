@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
 from main import plot_review_by_gender, plot_size_by_gender, plot_payment_methods, plot_categories_by_gender, plot_stacked_area, plot_shipping_pie, plot_purchase_boxplot
+import style
 st.set_page_config(
     page_title="Shoplytics",
     page_icon="🛒",
@@ -415,8 +415,7 @@ elif st.session_state.page == "dashboard":
                 options=["Select All","Express","Free Shipping","Standard","Store Pickup","Next Day Air","2-Day Shipping"],
                 index=None,
                 placeholder="Select option"
-            )
-            fig = plot_shipping_pie(filtered_df, selected_shipping)      
+            )      
             fig = plot_shipping_pie(filtered_df, selected_shipping)
             st.plotly_chart(fig, use_container_width=True)
             st.markdown(
