@@ -7,6 +7,22 @@ st.set_page_config(
     page_icon="🛒",
     layout="wide"
 )
+st.markdown(
+    """
+    <style>
+    iframe {
+        pointer-events: auto !important;
+    }
+    .stPlotlyChart {
+        z-index: 1;
+    }
+    div[data-baseweb="select"] {
+        z-index: 999 !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 st.markdown("""
 <style>
 /* nền toàn app */
@@ -285,7 +301,7 @@ elif st.session_state.page == "dashboard":
            font-family:Arial;
            margin-bottom:10px;
          ">
-           PURCHASE TREND
+           PURCHASE TREND 📊
          </h2>
          """,
          unsafe_allow_html=True
@@ -334,7 +350,7 @@ elif st.session_state.page == "dashboard":
            font-family:Arial;
            margin-bottom:10px;
          ">
-           PRODUCT ANALYSIS
+           PRODUCT ANALYSIS 🛍️
          </h2>
          """,
          unsafe_allow_html=True
@@ -383,7 +399,7 @@ elif st.session_state.page == "dashboard":
            font-family:Arial;
            margin-bottom:10px;
          ">
-           PAYMENT & SHIPPING TYPE
+          💳 PAYMENT & SHIPPING TYPE 🚚
          </h2>
          """,
          unsafe_allow_html=True
@@ -432,7 +448,7 @@ elif st.session_state.page == "dashboard":
            font-family:Arial;
            margin-bottom:10px;
          ">
-           REVIEW RATING
+           REVIEW RATING ⭐
          </h2>
          """,
          unsafe_allow_html=True
