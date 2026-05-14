@@ -301,7 +301,7 @@ elif st.session_state.page == "dashboard":
            font-family:Arial;
            margin-bottom:10px;
          ">
-           PURCHASE TREND
+           PURCHASE TREND 📊
          </h2>
          """,
          unsafe_allow_html=True
