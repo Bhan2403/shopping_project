@@ -350,7 +350,7 @@ elif st.session_state.page == "dashboard":
            font-family:Arial;
            margin-bottom:10px;
          ">
-           PRODUCT ANALYSIS
+           PRODUCT ANALYSIS 🛍️
          </h2>
          """,
          unsafe_allow_html=True
@@ -399,7 +399,7 @@ elif st.session_state.page == "dashboard":
            font-family:Arial;
            margin-bottom:10px;
          ">
-           PAYMENT & SHIPPING TYPE
+           PAYMENT 💳 & SHIPPING TYPE 🚚
          </h2>
          """,
          unsafe_allow_html=True
@@ -448,7 +448,7 @@ elif st.session_state.page == "dashboard":
            font-family:Arial;
            margin-bottom:10px;
          ">
-           REVIEW RATING
+           REVIEW RATING ⭐
          </h2>
          """,
          unsafe_allow_html=True
