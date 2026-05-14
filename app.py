@@ -23,23 +23,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background-color: #FFF5FA !important;
-        color: black !important;
-    }
-    html, body, [class*="css"] {
-        color: black !important;
-    }
-    p, label, span, div, h1, h2, h3, h4, h5, h6 {
-        color: black !important;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 st.markdown("""
 <style>
 /* nền toàn app */
