@@ -23,6 +23,23 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #FFF5FA !important;
+        color: black !important;
+    }
+    html, body, [class*="css"] {
+        color: black !important;
+    }
+    p, label, span, div, h1, h2, h3, h4, h5, h6 {
+        color: black !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 st.markdown("""
 <style>
 /* nền toàn app */
@@ -60,7 +77,6 @@ div[data-baseweb="select"] > div:focus-within {
     box-shadow: 0 0 0 3px rgba(255, 20, 147, 0.15) !important;
     border-color: #ff1493 !important;
 }
-)
 </style>
 """, unsafe_allow_html=True)
 # ===== PAGE STATE =====
