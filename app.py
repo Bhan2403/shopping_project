@@ -77,8 +77,10 @@ span[data-baseweb="tag"] svg {
 
     color: #c71585 !important;
 }
-/* LEGEND */
-.gtraces {
+/* disable legend cursor */
+
+.legendtoggle {
+
     cursor: default !important;
 }
 </style>
