@@ -342,7 +342,9 @@ def plot_stacked_area(df):
             y=1,
             xanchor="left",
             x=1.02
-        )
+        ),
+        legend_itemclick=False,
+        legend_itemdoubleclick=False
     )
     # STYLE
     fig = apply_style(
@@ -426,7 +428,9 @@ def plot_shipping_pie(df, selected_shipping=None):
             y=1,
             xanchor="left",
             x=1.02
-        )
+        ),
+        legend_itemclick=False,
+        legend_itemdoubleclick=False
     )
     # STYLE
     fig = apply_style(
