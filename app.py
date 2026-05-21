@@ -308,21 +308,21 @@ elif st.session_state.page == "dashboard":
         col1, col2 = st.columns([1, 1], gap="large")
         with col1:
          st.subheader("**Purchase Frequency**")
-         selected_frequency = st.selectbox(
+         selected_frequency = st.multiselect(
                 label="Frequency of Purchases",
                 options=["Weekly","Quarterly","Monthly","Fortnightly","Every 3 Months","Bi-Weekly","Annually","Select All"],
-                index=None,
+                default=[], 
 
                 placeholder="Select option"
             )
          if (
-                selected_frequency is None
-                or selected_frequency == "Select All"
+                len(selected_frequency) == 0
+                or "Select All" in selected_frequency
             ):
                filtered_frequency_df = filtered_df
          else:
                filtered_frequency_df = filtered_df[
-                    filtered_df["Frequency of Purchases"] == selected_frequency
+                    filtered_df["Frequency of Purchases"].isin(selected_frequency)
                 ]      
          fig = plot_stacked_area( filtered_frequency_df )
          st.plotly_chart( fig, use_container_width=True )
