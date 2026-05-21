@@ -60,6 +60,23 @@ div[data-baseweb="select"] > div:focus-within {
     box-shadow: 0 0 0 3px rgba(255, 20, 147, 0.15) !important;
     border-color: #ff1493 !important;
 }
+/* selected text */
+div[data-baseweb="select"] span {
+    color: #1f2a44 !important;
+    font-weight: 500;
+}
+/* MULTISELECT TAG */
+span[data-baseweb="tag"] {
+    background-color: #FFD6E8 !important;
+    color: #c71585 !important;
+    border-radius: 8px !important;
+    border: 1px solid #FFB3DA !important;
+}
+/* dấu x */
+span[data-baseweb="tag"] svg {
+
+    color: #c71585 !important;
+}
 </style>
 """, unsafe_allow_html=True)
 # ===== PAGE STATE =====
