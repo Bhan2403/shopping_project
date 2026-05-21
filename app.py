@@ -77,6 +77,10 @@ span[data-baseweb="tag"] svg {
 
     color: #c71585 !important;
 }
+/* LEGEND */
+.gtraces {
+    cursor: default !important;
+}
 </style>
 """, unsafe_allow_html=True)
 # ===== PAGE STATE =====
