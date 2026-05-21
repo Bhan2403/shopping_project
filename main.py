@@ -262,7 +262,9 @@ def plot_categories_by_gender(df):
         ))
     # LAYOUT
     fig.update_layout(
-        barmode='stack'
+        barmode='stack',
+        legend_itemclick=False,
+        legend_itemdoubleclick=False
     )
     fig = apply_style(
         fig,
