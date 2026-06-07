@@ -442,12 +442,7 @@ elif st.session_state.page == "dashboard":
                unsafe_allow_html=True
             )
         with col2:
-            st.subheader("**Shipping Type**")
-            st.markdown(
-               """
-              """,
-             unsafe_allow_html=True
-            )     
+            st.subheader("**Shipping Type**")    
             fig = plot_shipping_pie(filtered_df)
             st.plotly_chart(fig, use_container_width=True)
             st.markdown(
