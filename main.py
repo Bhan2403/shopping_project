@@ -355,7 +355,7 @@ def plot_stacked_area(df):
     )
     return fig
 # =========PLOT 6==========
-def plot_shipping_pie(df, selected_shipping=None):
+def plot_shipping_pie(df):
     summary_data = (
         df['Shipping Type']
         .value_counts()
@@ -373,28 +373,10 @@ def plot_shipping_pie(df, selected_shipping=None):
         "Next Day Air": "#FFD6E8",
         "2-Day Shipping": "#FFE5F1"
     }
-    colors = []
-    for label in summary_data["Shipping Type"]:
-        colors.append(
-            base_colors[label]
-        )
-    colors = []
-    for label in summary_data["Shipping Type"]:
-      if (
-        selected_shipping is None
-        or selected_shipping == "Select All"
-      ):
-        colors.append(
-            base_colors[label]
-        )
-      elif label == selected_shipping:
-        colors.append(
-            base_colors[label]
-        )
-      else:
-        colors.append(
-            "#f0ffff"
-        )
+    colors = [
+        base_colors[label]
+        for label in summary_data["Shipping Type"]
+    ]
     # PIE CHART
     fig = go.Figure(
         data=[
