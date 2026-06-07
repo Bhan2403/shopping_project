@@ -216,7 +216,7 @@ elif st.session_state.page == "dashboard":
         font-weight: 800;
         color: #444;
         margin-top: 10px;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
         text-align: center;
     }
     /*  LINE */
