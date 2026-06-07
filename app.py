@@ -389,7 +389,7 @@ elif st.session_state.page == "dashboard":
         col1, col2 = st.columns([1, 1], gap="large")
         with col1:
             st.subheader("**Product Categories**")
-            selected_gender = st.multiselect(
+            selected_category = st.multiselect(
                 label="Category",
                 options=["Clothing","Accessories","Footwear","Outwear"],
                 default=[],
