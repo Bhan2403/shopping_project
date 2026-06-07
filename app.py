@@ -389,21 +389,18 @@ elif st.session_state.page == "dashboard":
         col1, col2 = st.columns([1, 1], gap="large")
         with col1:
             st.subheader("**Product Categories**")
-            selected_gender = st.selectbox(
-                label="Gender",
-                options=["Female","Male","Select All"],
-                index=None,
+            selected_gender = st.multiselect(
+                label="Category",
+                options=["Clothing","Accessories","Footwear","Outwear"],
+                default=[],
                 placeholder="Select option"
             )
-            if (
-                selected_gender is None
-                or selected_gender == "Select All"
-            ):
-
-               filtered_category_df = filtered_df
+            if len(
+                selected_category == 0:
+                filtered_category_df = filtered_df
             else:
-               filtered_category_df = filtered_df[
-                    filtered_df["Gender"] == selected_gender
+                filtered_category_df = filtered_df[
+                    filtered_df["Category"].isin(selected_category)
                 ]      
             fig = plot_categories_by_gender(filtered_category_df)
             st.plotly_chart(fig, use_container_width=True)
