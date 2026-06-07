@@ -12,7 +12,7 @@ import plotly.graph_objects as go
 import matplotlib.colors as mcolors
 import pandas as pd
 import numpy as np
-# LOAD DATA
+# LOAD DATA 
 df = pd.read_csv("shopping_behavior_updated.csv")
 set_theme()
 # =========================
