@@ -435,7 +435,6 @@ elif st.session_state.page == "dashboard":
         col1, col2 = st.columns([1, 1], gap="large")
         with col1:
             st.subheader("**Payment Method**")
-            st.markdown("<br><br>", unsafe_allow_html=True)
             fig = plot_payment_methods(filtered_df)
             st.plotly_chart(fig, use_container_width=True)
             st.markdown(
@@ -446,11 +445,6 @@ elif st.session_state.page == "dashboard":
             st.subheader("**Shipping Type**")
             st.markdown(
                """
-              <style>
-             div[data-baseweb="select"] {
-                margin-bottom: -35px;
-             }
-             </style>
               """,
              unsafe_allow_html=True
             )     
