@@ -453,14 +453,8 @@ elif st.session_state.page == "dashboard":
              </style>
               """,
              unsafe_allow_html=True
-            )
-            selected_shipping = st.selectbox(
-                label="Shipping Type",
-                options=["Select All","Express","Free Shipping","Standard","Store Pickup","Next Day Air","2-Day Shipping"],
-                index=None,
-                placeholder="Select option"
-            )      
-            fig = plot_shipping_pie(filtered_df, selected_shipping)
+            )     
+            fig = plot_shipping_pie(filtered_df)
             st.plotly_chart(fig, use_container_width=True)
             st.markdown(
                "<p style='font-size:16px; color:black;text-align:justify'>This chart illustrates the proportion of various delivery methods selected by customers. It helps in understanding customer preferences for shipping speed and convenience by showing the relative popularity of each available option.</p>",
