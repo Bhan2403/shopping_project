@@ -299,7 +299,12 @@ elif st.session_state.page == "dashboard":
     (df["Age"] >= age_range[0]) &
     (df["Age"] <= age_range[1])
     ]
-     st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
+    gender_filter = st.multiselect(
+        "GENDER",
+        options=["Male", "Female"],
+        default=["Male", "Female"]
+    )
+    st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
      col1, col2, col3 = st.columns([1, 2, 1])
      with col2:
         if st.button("Click here for gift!"):
