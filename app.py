@@ -307,6 +307,7 @@ elif st.session_state.page == "dashboard":
     (df["Age"] <= age_range[1]) &
     (df["Gender"].isin(gender_filter))
     ]
+     st.markdown( "<div style='height:25px'></div>", unsafe_allow_html=True )
      st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
      col1, col2, col3 = st.columns([1, 2, 1])
      with col2:
