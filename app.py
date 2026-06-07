@@ -396,7 +396,7 @@ elif st.session_state.page == "dashboard":
                 placeholder="Select option"
             )
             if len(
-                selected_category == 0:
+                selected_category) == 0:
                 filtered_category_df = filtered_df
             else:
                 filtered_category_df = filtered_df[
