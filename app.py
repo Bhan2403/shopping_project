@@ -295,15 +295,17 @@ elif st.session_state.page == "dashboard":
         (18, 30),
         step = 1
     )
-     filtered_df = df[
-    (df["Age"] >= age_range[0]) &
-    (df["Age"] <= age_range[1])
-    ]
-    gender_filter = st.multiselect(
+     st.markdown( '<div class="divider"></div>', unsafe_allow_html=True )
+     gender_filter = st.multiselect(
         "GENDER",
         options=["Male", "Female"],
         default=["Male", "Female"]
     )
+     filtered_df = df[
+    (df["Age"] >= age_range[0]) &
+    (df["Age"] <= age_range[1]) &
+    (df["Gender"].isin(gender_filter))
+    ]
      st.markdown('<div class="divider"></div>', unsafe_allow_html=True)
      col1, col2, col3 = st.columns([1, 2, 1])
      with col2:
